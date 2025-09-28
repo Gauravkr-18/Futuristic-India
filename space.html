@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Glimpse of 2047 in India 🇮🇳🌏</title>
+    <link rel="stylesheet" href="india2047.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #111d2c;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            font-size: 20px;
+        }
+        
+      
+        .home-btn {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #ff6600;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+        }
+        .home-btn:hover {
+            background: #ff3300;
+            transform: scale(1.1);
+        }
+        
+    
+        .title {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 10px #ffcc00;
+        }
+        
+       
+        .main-image-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .main-image {
+            width: 80%;
+            max-width: 1000px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.6);
+        }
+        
+       
+        .india-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+     
+        .india-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            width: 300px;
+            text-align: center;
+            transition: 0.4s ease-in-out;
+        }
+        .india-card img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .india-card p {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        .india-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.6);
+        }
+        
+   
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: #1d2b41;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        </style>
+</head>
+<body>
+
+    <a href="index.html" class="home-btn">🏠 Return to Home</a>
+
+ 
+    <h1 class="title">🇮🇳 A Glimpse of 2047 in India 🌏</h1>
+
+   
+    <div class="main-image-container">
+        <img src="futuristic glimpse.jpg" alt="India 2047 Vision" class="main-image">
+    </div>
+    <p>
+        India's Vision 2047 is a futuristic outlook on the country's growth and development. With advancements in technology, infrastructure, and innovation, India is poised to lead the world in various sectors. Let's explore some of the key areas where India is making significant progress towards 2047.
+    </p>
+
+   
+    <div class="india-container">
+        <div class="india-card">
+            <img src="Smart Cities.jpg" alt="Smart Cities">
+            <p><strong>🏙️ Smart Cities:</strong>In 2047, India’s cities will be transformed into smart hubs, powered by cutting-edge technology. From AI-driven traffic systems to eco-friendly buildings, these cities will seamlessly integrate innovation with sustainability, ensuring convenience and efficiency for citizens. The future is connected, intelligent, and green! 🌱💡</p>
+        </div>
+        <div class="india-card">
+            <img src="Renewable Energy.jpg" alt="Renewable Energy">
+            <p><strong>⚡ Renewable Energy:</strong> By 2047, India will harness the full potential of Armstrong Renewable Energy, leading the charge in solar, wind, and other clean energy sources. The country will power itself sustainably, drastically reducing carbon footprints and establishing a new era of energy independence. 🌍🔋</p>
+        </div>
+        <div class="india-card">
+            <img src="AI & Robotics.jpg" alt="AI & Robotics">
+            <p><strong>🤖 AI & Robotics:</strong> AI and robotics will redefine India’s future in 2047. With machines performing tasks from healthcare to construction, automation will enhance productivity, and robots will work alongside humans to improve lives and efficiency. Get ready for a world where technology and humanity unite to shape the future! 💡🛠️</p>
+        </div>
+        <div class="india-card">
+            <img src="Space Exploration.jpg" alt="Space Exploration">
+            <p><strong>🚀 Space Exploration:</strong> Space Exploration 🚀🌌
+                India’s space journey will soar to new heights by 2047, with advanced satellites and missions exploring distant planets and even the moon! ISRO's initiatives will inspire global admiration as India becomes a leader in space exploration, contributing to a new era of scientific discovery and interplanetary research. 🌠🪐</p>
+        </div>
+        <div class="india-card">
+            <img src="sustainable Farming.jpg" alt="Sustainable Farming">
+            <p><strong>🌱 Sustainable Farming:</strong> Agriculture in 2047 will embrace smart, sustainable practices that boost production while protecting the environment. Advanced technology will enable farmers to monitor crops in real-time, reduce water wastage, and increase yield through eco-friendly techniques, ensuring India’s food security while nurturing the planet. 🌿🌻</p>
+        </div>
+    </div>
+
+ 
+    <footer>
+        <p>🌏 India's Vision 2047 | Designed by You 🚀</p>
+    </footer>
+
+<script>document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".india-card");
+
+    function fadeInOnScroll() {
+        cards.forEach((card) => {
+            let cardTop = card.getBoundingClientRect().top;
+            let windowHeight = window.innerHeight;
+
+            if (cardTop < windowHeight - 50) {
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+            }
+        });
+    }
+
+    window.addEventListener("scroll", fadeInOnScroll);
+    fadeInOnScroll();
+});
+</script>
+
+</body>
+</html>

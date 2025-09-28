@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Farming 🚜🌾</title>
+    <link rel="stylesheet" href="farming.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a0f24;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            font-size: 20px;
+        }
+        
+       
+        .home-btn {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #ffcc00;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+        }
+        .home-btn:hover {
+            background: #ffaa00;
+            transform: scale(1.1);
+        }
+        
+       
+        .title {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 10px #00ffcc;
+        }
+        
+       
+        .main-image-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .main-image {
+            width: 80%;
+            max-width: 1000px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0, 255, 200, 0.6);
+        }
+        
+       
+        .farming-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        
+        .farming-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            width: 300px;
+            text-align: center;
+            transition: 0.4s ease-in-out;
+        }
+        .farming-card img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .farming-card p {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        .farming-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(0, 255, 200, 0.6);
+        }
+  
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: #031025;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        </style>
+</head>
+<body>
+
+
+    <a href="index.html" class="home-btn">🏠 Return to Home</a>
+
+  
+    <h1 class="title">🌱 Futuristic Farming: The Next Era of Agriculture 🚜</h1>
+
+    <div class="main-image-container">
+        <img src="farming.jpg" alt="Futuristic Farm" class="main-image">
+       
+    </div>
+    <p style="display: block; margin-top: 10px;">
+        <strong>🌍 Future Farming Innovations:</strong> Discover the latest technologies transforming agriculture.
+    </p>
+
+    
+    <div class="farming-container">
+        <div class="farming-card">
+            <img src="Vertical Farming.jpg" alt="Vertical Farming">
+            <p><strong>🌆 Vertical Farming:</strong>"In the heart of India’s smart cities, towering vertical farms produce fresh food year-round. AI-controlled lighting, automated irrigation, and climate regulation allow multi-layered farming, ensuring high yields with minimal land use. These futuristic farms help feed the growing population while reducing environmental impact." 🌱🏢🇮🇳</p>
+        </div>
+        <div class="farming-card">
+            <img src="AI-Driven Robots.jpg" alt="AI-Driven Robots">
+            <p><strong>🤖 AI Robots:</strong> "AI-powered robotic farmers have transformed Indian agriculture, working day and night with precision. These intelligent machines autonomously plant, monitor, and harvest crops, reducing labor costs and increasing efficiency. Advanced sensors ensure optimal soil health, making farming smarter and more productive than ever." 🤖🌾🚜</p>
+        </div>
+        <div class="farming-card">
+            <img src="Hydroponics.jpg" alt="Hydroponics">
+            <p><strong>💧 Hydroponics:</strong> "Hydroponic farming has revolutionized Indian agriculture by replacing soil with nutrient-rich water. Controlled environments ensure faster crop growth, higher yields, and zero pesticide use. From urban homes to mega greenhouses, hydroponics has made farming more sustainable and accessible across India." 💧🌱🏡</p>
+        </div>
+        <div class="farming-card">
+            <img src="drone-m.jpg" alt="Drone Monitoring">
+            <p><strong>🚁 Drone Monitoring:</strong> "AI-powered drones fly over vast Indian farmlands, analyzing soil health, detecting diseases, and optimizing irrigation in real time. These high-tech drones provide farmers with precise data, enabling smart decision-making and increasing agricultural output while conserving resources." 🚁🌾📡</p>
+        </div>
+        <div class="farming-card">
+            <img src="Solar Farming.jpg" alt="Solar Farming">
+            <p><strong>☀️ Solar-Powered Farms:</strong> "India’s farmlands are now powered by the sun! Solar panels generate clean energy for irrigation, robotic equipment, and climate-controlled greenhouses. With self-sustaining farms, India leads the world in eco-friendly and energy-efficient agriculture, ensuring food security and sustainability." ☀️🌱⚡</p>
+        </div>
+    </div>
+
+   
+    <footer>
+        <p>🌍 Future Farming Innovations | Designed by You 🚀</p>
+    </footer>
+<script>document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".farming-card");
+
+    function fadeInOnScroll() {
+        cards.forEach((card) => {
+            let cardTop = card.getBoundingClientRect().top;
+            let windowHeight = window.innerHeight;
+
+            if (cardTop < windowHeight - 50) {
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+            }
+        });
+    }
+
+    window.addEventListener("scroll", fadeInOnScroll);
+    fadeInOnScroll();
+});
+</script>
+</body>
+</html>

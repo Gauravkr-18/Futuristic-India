@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future of Space Exploration 🚀🌌</title>
+    <link rel="stylesheet" href="space.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #02022e;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            font-size: 20px;
+        }
+        
+ 
+        .home-btn {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #ff6600;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+        }
+        .home-btn:hover {
+            background: #ff3300;
+            transform: scale(1.1);
+        }
+        
+       
+        .title {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 10px #00ffcc;
+        }
+        
+       
+        .main-image-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .main-image {
+            width: 80%;
+            max-width: 1000px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.6);
+        }
+        
+       
+        .exploration-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+       
+        .exploration-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            width: 300px;
+            text-align: center;
+            transition: 0.4s ease-in-out;
+        }
+        .exploration-card img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .exploration-card p {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        .exploration-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.6);
+        }
+        
+       
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: #030323;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        </style>
+</head>
+<body>
+
+  
+    <a href="index.html" class="home-btn">🏠 Return to Home</a>
+
+   
+    <h1 class="title">🚀 The Future of Space Exploration 🌌</h1>
+
+
+    <div class="main-image-container">
+        <img src="space.jpg"Space Exploration" class="main-image">
+    </div>
+    <p>
+        The future of space exploration is filled with exciting possibilities and innovations. From Mars colonization to space tourism, the next era of space exploration will be driven by advancements in technology and human ambition. Here are some of the key areas that will shape the future of space exploration.
+    </p>
+
+   
+    <div class="exploration-container">
+        <div class="exploration-card">
+            <img src="Mars.jpg" alt="Mars Colonization">
+            <p><strong>🪐1️ Space Ship on Mars</strong> "India's first crewed mission to Mars successfully lands, marking a historic milestone. Advanced AI-powered rovers explore the Martian surface, while astronauts set up a self-sustaining research base, unlocking the mysteries of the Red Planet." 🚀🪐🇮🇳</p>
+        </div>
+        <div class="exploration-card">
+            <img src="Moon.jpg" alt="AI in Space">
+            <p><strong>🤖  India’s Armstrong Moment on the Moon</strong> "An Indian astronaut takes a historic step on the Moon’s South Pole, planting the tricolor flag. ISRO’s lunar base, powered by solar energy and AI-driven labs, stands as a testament to India’s leadership in space exploration." 🌕👨‍🚀🇮🇳</p>
+        </div>
+        <div class="exploration-card">
+            <img src="isro.webp" alt="Space Tourism">
+            <p><strong>🌠 ISRO Tourism</strong> "India’s space tourism industry flourishes as luxury space stations orbit Earth. Citizens experience zero gravity, breathtaking cosmic views, and guided spacewalks, making space travel accessible to all." 🛰️🌍🚀</p>
+        </div>
+        <div class="exploration-card">
+            <img src="New Planets.jpg" alt="Space Habitats">
+            <p><strong>🏠Exploring New Planets</strong> "India’s deep-space missions reach distant exoplanets, deploying AI-driven probes to analyze their atmospheres and surfaces. Scientists at ISRO monitor real-time data, searching for habitable worlds and extraterrestrial life." 🔭🛸🌌</p>
+        </div>
+        <div class="exploration-card">
+            <img src="Exploration of the Sun.jpg" alt="Exoplanet Exploration">
+            <p><strong>🌍 Exploration of the Sun</strong> "India’s deep-space missions reach distant exoplanets, deploying AI-driven probes to analyze their atmospheres and surfaces. Scientists at ISRO monitor real-time data, searching for habitable worlds and extraterrestrial life." 🔭🛸🌌</p>
+        </div>
+    </div>
+
+   
+    <footer>
+        <p>🌌 Space Exploration | Designed by You 🚀</p>
+    </footer>
+
+<script>document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".exploration-card");
+
+    function fadeInOnScroll() {
+        cards.forEach((card) => {
+            let cardTop = card.getBoundingClientRect().top;
+            let windowHeight = window.innerHeight;
+
+            if (cardTop < windowHeight - 50) {
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+            }
+        });
+    }
+
+    window.addEventListener("scroll", fadeInOnScroll);
+    fadeInOnScroll();
+});
+</script>
+
+</body>
+</html>

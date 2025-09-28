@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Memories 📸</title>
+    <link rel="stylesheet" href="memories.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background: #222;
+        color: white;
+        padding: 20px;
+        font-size: 24px;
+      }
+
+      .home-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: #ff5733;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      .home-btn:hover {
+        background: #d43f1d;
+      }
+
+      .main-project {
+        margin: 30px auto;
+        text-align: center;
+      }
+
+      .dull-image {
+        width: 80%;
+        max-width: 800px;
+        filter: grayscale(50%);
+        transition: filter 0.3s ease-in-out;
+      }
+
+      .dull-image:hover {
+        filter: grayscale(0%);
+      }
+
+      .image-grid {
+        padding: 20px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 10px;
+        padding: 20px;
+      }
+
+      .grid img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      .grid img:hover {
+        transform: scale(1.1);
+      }
+
+      #lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #lightbox.hidden {
+        display: none;
+      }
+
+      #lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>📸 Project Memories 🎞️</h1>
+      <a href="index.html" class="home-btn">🏠 Return to Home</a>
+    </header>
+
+    <section class="main-project">
+      <img src="b1.jpeg" alt="Final Project" class="dull-image" />
+    </section>
+
+    <section class="image-grid">
+      <div class="grid">
+        <img src="memory0.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory1.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory2.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory3.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory4.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory5.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory6.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory7.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory7.0.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory7.1.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory7.2.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory8.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory9.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory10.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory11.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory12.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory13.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory14.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory15.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory16.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory17.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory18.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory19.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory20.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory21.jpeg" alt="Memory 1" class="memory" />
+        <img src="memory22.jpeg" alt="Memory 1" class="memory" />
+        
+      
+      </div>
+    </section>
+
+    <div id="lightbox" class="hidden">
+      <span class="close">&times;</span>
+      <img id="lightbox-img" />
+    </div>
+
+    <script src="memories.js"></script>
+    <script>
+      const images = document.querySelectorAll(".memory");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const closeBtn = document.querySelector(".close");
+
+      images.forEach((img) => {
+        img.addEventListener("click", () => {
+          lightboxImg.src = img.src;
+          lightbox.classList.remove("hidden");
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        lightbox.classList.add("hidden");
+      });
+
+      lightbox.addEventListener("click", (e) => {
+        if (e.target !== lightboxImg) {
+          lightbox.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
